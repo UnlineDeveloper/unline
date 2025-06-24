@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="ticketEdtHeight">48dp</dimen>
+    <dimen name="margin">16dp</dimen>
+</resources>

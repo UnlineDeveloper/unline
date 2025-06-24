@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+    <EditText
+            android:layout_width="88dp"
+            android:layout_height="@dimen/ticketEdtHeight"
+            android:autofillHints="no" android:inputType="number"
+            android:id="@+id/ticketsEdt"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/incrementBtn"/>
+    <TextView
+            android:id="@+id/counterLabel"
+            android:text="@string/tickets_given"
+            android:labelFor="@id/ticketsEdt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@id/ticketsEdt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ticketsEdt"
+            android:textAlignment="textEnd"
+            android:layout_margin="@dimen/margin"/>
+    <Button
+            android:text="@string/incrementBtnTxt"
+            android:layout_width="50dp"
+            android:layout_height="@dimen/ticketEdtHeight"
+            android:id="@+id/incrementBtn"
+            android:layout_marginEnd="@dimen/margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ticketsEdt"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
